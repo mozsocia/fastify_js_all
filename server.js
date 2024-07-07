@@ -1,3 +1,5 @@
+require('module-alias/register');
+
 const fastify = require('fastify');
 const { migrate } = require('drizzle-orm/better-sqlite3/migrator');
 const db = require('./config/database');

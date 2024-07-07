@@ -20,6 +20,12 @@
     "drizzle-kit": "^0.22.8",
     "drizzle-orm": "^0.31.2",
     "fastify": "^4.28.1",
-    "fastify-plugin": "^4.5.1"
+    "fastify-plugin": "^4.5.1",
+    "module-alias": "^2.2.3"
+  },
+  "_moduleAliases": {
+    "@": ".",
+    "@app": "./app",
+    "@config": "./config"
   }
 }
