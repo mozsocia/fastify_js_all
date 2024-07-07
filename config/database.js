@@ -1,8 +1,10 @@
 const { drizzle } = require('drizzle-orm/better-sqlite3');
 const Database = require('better-sqlite3');
-const schema = require('../app/models/schema');
+const blogModuleSchema = require('../app/blog/models/schema');
 
 const sqlite = new Database('sqlite.db');
-const db = drizzle(sqlite, { schema });
+const db = drizzle(sqlite, { 
+    schema: { ...blogModuleSchema }
+ });
 
 module.exports = db;

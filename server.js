@@ -2,16 +2,17 @@ const fastify = require('fastify');
 const { migrate } = require('drizzle-orm/better-sqlite3/migrator');
 const db = require('./config/database');
 const serverConfig = require('./config/server');
+const {registerApiRoutes , registerPageRoutes} = require('./app/routeManager');
 
 const app = fastify(serverConfig);
 
 // Run migrations
-migrate(db, { migrationsFolder: './database/migrations' });
+// migrate(db, { migrationsFolder: './database/migrations' });
 
-// Register routes
-app.register(require('./app/routes/userRoutes'));
-app.register(require('./app/routes/postRoutes'));
 
+// Register all routes
+app.register(registerApiRoutes);
+app.register(registerPageRoutes);
 
 // Welcome message
 app.get('/', (request, reply) => {

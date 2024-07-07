@@ -1,5 +1,5 @@
-const db = require('../../config/database');
-const { posts } = require('../models/schema');
+const db = require('../../../../config/database');
+const { posts } = require('../../models/schema');
 
 exports.getAllPosts = async (request, reply) => {
   const allPosts = await db.query.posts.findMany({
