@@ -1,0 +1,22 @@
+<!-- src/views/blog/list.njk -->
+{% extends "layouts/main.njk" %}
+
+{% block title %}All Blogs{% endblock %}
+
+{% block content %}
+    <h1>All Blog Posts</h1>
+    {% if blogs.length > 0 %}
+        <ul class="blog-list">
+            {% for blog in blogs %}
+                <li>
+                    <h2><a href="/blogs/{{ blog.id }}">{{ blog.title }}</a></h2>
+                    <p>By {{ blog.author }} on {{ blog.createdAt | date }}</p>
+                    <p>{{ blog.content | truncate(100) }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No blog posts found.</p>
+    {% endif %}
+    <a href="/blogs/new" class="button">Create New Blog</a>
+{% endblock %}

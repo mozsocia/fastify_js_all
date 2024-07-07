@@ -1,0 +1,25 @@
+{
+  "name": "blog_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/view": "^9.1.0",
+    "better-sqlite3": "^11.1.2",
+    "drizzle-orm": "^0.31.2",
+    "fastify": "^4.28.1",
+    "fastify-static": "^4.7.0",
+    "nunjucks": "^3.2.4",
+    "point-of-view": "^6.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
