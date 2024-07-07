@@ -1,4 +1,4 @@
-const db = require('../config/database');
+const db = require('../../config/database');
 const { users } = require('../models/schema');
 
 exports.getAllUsers = async (request, reply) => {

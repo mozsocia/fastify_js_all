@@ -1,5 +1,5 @@
 module.exports = {
-    schema: './models/schema.js',
+    schema: './app/models/schema.js',
     out: './database/migrations',
     dialect: 'sqlite',
     dbCredentials: {

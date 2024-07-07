@@ -9,8 +9,8 @@ const app = fastify(serverConfig);
 migrate(db, { migrationsFolder: './database/migrations' });
 
 // Register routes
-app.register(require('./routes/userRoutes'));
-app.register(require('./routes/postRoutes'));
+app.register(require('./app/routes/userRoutes'));
+app.register(require('./app/routes/postRoutes'));
 
 
 // Welcome message

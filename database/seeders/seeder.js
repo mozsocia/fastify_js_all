@@ -2,7 +2,7 @@
 // seeder.js
 const { drizzle } = require('drizzle-orm/better-sqlite3');
 const Database = require('better-sqlite3');
-const { users, posts } = require('../../models/schema');
+const { users, posts } = require('../../app/models/schema');
 console.log('Seeding...');
 
 async function seed() {
