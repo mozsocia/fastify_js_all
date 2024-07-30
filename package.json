@@ -4,13 +4,13 @@
   "description": "",
   "main": "drizzle.config.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "generate-migrations": "drizzle-kit generate --config ./config/drizzle.config.js",
-    "migrate": "drizzle-kit migrate --config ./config/drizzle.config.js",
-    "seed": "node database/seeders/seeder.js",
-    "drop_db": "node commands/refreshDb.js",
-    "refresh_and_seed": "node commands/refreshDb.js && npm run generate-migrations && npm run migrate && npm run seed"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "generate-migrations": "drizzle-kit generate --config src/config/drizzle.config.js",
+    "migrate": "drizzle-kit migrate --config src/config/drizzle.config.js",
+    "seed": "node src/database/seeders/seeder.js",
+    "drop_db": "node src/commands/refreshDb.js",
+    "refresh_and_seed": "node src/commands/refreshDb.js && npm run generate-migrations && npm run migrate && npm run seed"
   },
   "keywords": [],
   "author": "",
@@ -24,8 +24,8 @@
     "module-alias": "^2.2.3"
   },
   "_moduleAliases": {
-    "@": ".",
-    "@app": "./app",
-    "@config": "./config"
+    "@": "src/",
+    "@app": "src/app",
+    "@config": "src/config"
   }
 }

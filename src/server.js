@@ -2,8 +2,8 @@ require('module-alias/register');
 
 const fastify = require('fastify');
 const { migrate } = require('drizzle-orm/better-sqlite3/migrator');
-const db = require('./config/database');
-const serverConfig = require('./config/server');
+const db = require('./config/database.config');
+const serverConfig = require('./config/server.config');
 const {registerApiRoutes , registerPageRoutes} = require('./app/routeManager');
 
 const app = fastify(serverConfig);

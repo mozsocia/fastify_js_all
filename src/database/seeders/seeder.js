@@ -2,12 +2,12 @@
 // seeder.js
 const { drizzle } = require('drizzle-orm/better-sqlite3');
 const Database = require('better-sqlite3');
-const { users, posts } = require('../../app/models/schema');
+const { users, posts } = require('../../app/blog/models/schema');
 console.log('Seeding...');
 
 async function seed() {
   // Initialize SQLite database
-  const sqlite = new Database('sqlite.db');
+  const sqlite = new Database('src/sqlite.db');
   const db = drizzle(sqlite);
 
   // Static user data
